@@ -3,6 +3,19 @@
   text-align: center;
 }
 
-.Header {
-  text-align: center;
+.todo-list {
+  /* Styles for the entire list (optional) */
+  padding: 0;
+  margin: 0;
 }
+
+.todo-item {
+  /* Styles for individual list items */
+  list-style: none; /* Remove default bullet points for unordered lists */
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+
