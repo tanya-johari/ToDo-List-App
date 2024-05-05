@@ -1,7 +1,24 @@
-.Application {
+.App {
   font-family: sans-serif;
   text-align: center;
 }
+
+.App input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 80px); /* Adjust width as needed */
+  margin-right: 10px;
+}
+
+.btn-mark {
+  padding: 0; /* Remove padding */
+  border: none;
+  background-color: transparent; /* Transparent background */
+  cursor: pointer; /* Keep cursor as pointer */
+  font-size: 18px; /* Adjust font size as needed */
+}
+
 
 .todo-list {
   /* Styles for the entire list (optional) */

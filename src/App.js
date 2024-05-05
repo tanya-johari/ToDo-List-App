@@ -9,9 +9,9 @@ const todoitems = ["Read SpringBoot", "Complete assignments", "Prepare breakfast
 export default function App() {
 
   const [todos, setTodos] = useState(todoitems);
-
+ 
   return (
-    <div className="Application">
+    <div className="App">
       <Header />
       <ToDoList todos={todos} setTodos={setTodos}/>
     </div>
