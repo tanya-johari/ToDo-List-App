@@ -25,6 +25,10 @@ const ToDoList = ({ todos, setTodos }) => {
   };
 
   const handleRemoveCompleted = () => {
+    setCompletedList((prevCompletedList) => {
+      const filteredCompletedList = prevCompletedList.filter((completed, index) => !completed);
+      return filteredCompletedList;
+    });
     setTodos((prevTodos) => prevTodos.filter((_, index) => !completedList[index]));
   };
 

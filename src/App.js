@@ -28,7 +28,7 @@ export default function App() {
         value={newTask}
         onChange={(e) => setNewTask(e.target.value)}
       />
-      <button type="button" onClick={() => addTodo(newTask)}>  {/* Button type set to button */}
+      <button className="btn-add" type="button" onClick={() => addTodo(newTask)}>  {/* Button type set to button */}
         Add Task
       </button>
     </form>
