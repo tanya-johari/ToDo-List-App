@@ -16,6 +16,14 @@
   border-bottom: 1px solid #ddd;
 }
 
-
+.btn-empty {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f00; /* Adjust color as needed */
+  color: white;
+  cursor: pointer;
+  margin: auto 0; 
+}
 
 
