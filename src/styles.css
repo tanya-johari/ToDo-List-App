@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  margin: 0; /* Remove default body margin */
+  margin: 0; 
   background-color: #f5f5f5;
 }
 
@@ -29,8 +29,8 @@ header.Header {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 16px; /* Increase input font size slightly */
-  width: calc(100% - 80px); /* Adjust width as needed */
+  font-size: 16px; 
+  width: calc(100% - 80px); 
   margin-right: 10px;
 }
 
@@ -43,12 +43,12 @@ header.Header {
   border-radius: 4px;
   background-color: #4CAF50;
   color: white;
-  cursor: pointer; /* Indicate clickable button */
-  transition: background-color 0.2s ease-in-out; /* Add smooth hover effect */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; 
 }
 
 .todo-input-container button:hover {
-  background-color: #3e8e41; /* Change background color on hover */
+  background-color: #3e8e41; 
 }
 
 .todo-list {
@@ -61,23 +61,22 @@ header.Header {
   text-align: center;
   padding: 15px;
   border-bottom: 1px solid #ddd;
-  cursor: pointer; /* Indicate clickable todo items */
+  cursor: pointer; 
 }
 
 .todo-item.completed {
-  text-decoration: line-through;
-  color: #aaa; /* Gray out completed tasks */
+  color: #aaa; 
 }
 
 .empty-message {
   text-align: center;
   font-style: italic;
-  color: #ccc; /* Lighten empty message color */
+  color: #ccc; 
 }
 
 .btn-container {
   display: flex;
-  justify-content: space-between; /* Space buttons evenly */
+  justify-content: space-between; 
   margin-top: 20px;
 }
 
@@ -92,19 +91,19 @@ header.Header {
 }
 
 .btn-remove {
-  background-color: #f44336; /* Red color for removal button */
+  background-color: #f44336; 
   color: white;
 }
 
 .btn-remove:hover {
-  background-color: #d32f2f; /* Darker red on hover */
+  background-color: #d32f2f; 
 }
 
 .btn-empty {
-  background-color: #3f51b5; /* Blue color for empty button */
+  background-color: #3f51b5; 
   color: white;
 }
 
 .btn-empty:hover {
-  background-color: #283776; /* Darker blue on hover */
+  background-color: #283776; 
 }
