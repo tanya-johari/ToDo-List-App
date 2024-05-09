@@ -1,18 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import ToDoItem from './ToDoItem';
 
 const oldtodos = [
-        { text: "Read SpringBoot", completed: false },
-        { text: "Complete assignments", completed: false },
-        { text: "Prepare breakfast", completed: false },
-        { text: "Sleep for 2 hours", completed: false },
-        { text: "Take a shower", completed: false }
-]
+  { text: "Read SpringBoot", completed: false },
+  { text: "Complete assignments", completed: false },
+  { text: "Prepare breakfast", completed: false },
+  { text: "Sleep for 2 hours", completed: false },
+  { text: "Take a shower", completed: false }
+];
 
 export default function ToDoList() {
-  const [todos, setTodos] = useState(oldtodos);
+  const [todos, setTodos] = useState([]);
   const [newTask, setNewTask] = useState('');
+
+  const saveToLocalStorage = (todos, newTask) => {
+    localStorage.setItem('todos', JSON.stringify({ todos, newTask }));
+  };
+
+  const loadFromLocalStorage = () => {
+    const storedData = localStorage.getItem('todos');
+    if (!storedData) return { todos: oldtodos, newTask: '' };
+
+    const { todos, newTask } = JSON.parse(storedData);
+    return { todos: todos || oldtodos, newTask: newTask || '' };
+  };
 
   const addTodo = () => {
     if (newTask.trim()) {
@@ -37,6 +49,16 @@ export default function ToDoList() {
     setTodos([]);
   };
 
+  useEffect(() => {
+    const { todos, newTask } = loadFromLocalStorage();
+    setTodos(todos);
+    setNewTask(newTask);
+  }, []);
+
+  useEffect(() => {
+    saveToLocalStorage(todos, newTask);
+  }, [todos, newTask]);
+
   return (
     <div className="todo-list-container">
       <Header />
@@ -46,6 +68,7 @@ export default function ToDoList() {
           placeholder="Add a new task"
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
+          data-testid="todo-input"
         />
         <button className="btn-add" type="button" onClick={addTodo}>
           Add Task

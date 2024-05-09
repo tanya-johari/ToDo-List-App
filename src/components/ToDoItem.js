@@ -9,7 +9,8 @@ export default function ToDoItem({ text, completed, onToggleCompleted }) {
     <li
       className={`todo-item ${completed ? 'completed' : ''}`}
       onClick={handleToggleCompleted}
-      style={{ cursor: completed ? 'default' : 'pointer' }}
+      data-testid="todo-item-checkbox"
+      style={{ cursor: completed ? 'default' : 'pointer', textDecoration: completed ? 'line-through' : 'none' }}
     >
       {text}
     </li>
