@@ -68,7 +68,7 @@ describe('ToDoList Component', () => {
   it('empties the todo list', () => {
     const { getByText, getByTestId } = render(<ToDoList />);
 
-    fireEvent.change(getByTestId('todo-input'), { target: { value: 'Complete assignments' } });
+    fireEvent.change(getByTestId('todo-input'), { target: { value: 'Complete notes' } });
     fireEvent.click(getByText('Add Task'));
 
     fireEvent.click(getByText('Empty'));
